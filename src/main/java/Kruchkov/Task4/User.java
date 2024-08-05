@@ -20,7 +20,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
     @Entity
-    @Table(name="Users")
+    @Table(name="user")
 
 
     public class User {
