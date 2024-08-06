@@ -2,22 +2,23 @@ package Kruchkov.Task4;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class UserDAO {
-    private HikariDataSourcePool hikariDataSourcePool;
+    private DataSource dataSource;
     private Connection  con;
     private String      tableName;
-    Statement statement ;
+    private Statement statement ;
 
     @Autowired
-    public UserDAO(HikariDataSourcePool hikariDataSourcePool) {
-        this.hikariDataSourcePool = hikariDataSourcePool;
+    public UserDAO(DataSource dataSource) {
+        this.dataSource = dataSource;
         this.tableName = "student.user";
         try {
-            this.con = this.hikariDataSourcePool.getConnection();
+            this.con = this.dataSource.getConnection();
             statement = con.createStatement();
         }
         catch(SQLException ex) {
