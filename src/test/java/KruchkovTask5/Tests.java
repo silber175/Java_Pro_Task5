@@ -11,7 +11,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class Tests {
 
     @Test
@@ -35,7 +34,6 @@ public class Tests {
                     "Не выбирается продукт по id");
         }
     }
-
 
     @Test
     public void findByUseriD() throws SQLException {

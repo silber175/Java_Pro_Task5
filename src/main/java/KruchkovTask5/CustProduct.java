@@ -18,7 +18,6 @@ public class CustProduct {
         this.balance = balance;
         this.productType = productType;
     }
-
     public long getId() {
         return this.id;
     }

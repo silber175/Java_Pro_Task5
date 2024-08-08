@@ -60,6 +60,7 @@ public class CustProductDao {
         }
         catch(SQLException e){ throw e; }
     }
+    // Далее нужный комментарий
 // Select по userId выполняется в связке со следующей таблицей:
     /*
 public class UserCustProduct {

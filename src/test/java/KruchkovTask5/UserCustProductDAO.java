@@ -25,6 +25,7 @@ public class UserCustProductDAO {
             throw new RuntimeException((ex));
         }
     }
+
     public List<UserCustProduct> findAll() throws SQLException {
         List<UserCustProduct> userCustProducts = new ArrayList<>();
         String query = "SELECT id AS id , user_id AS user_id, cust_product_id AS cust_product_id" +

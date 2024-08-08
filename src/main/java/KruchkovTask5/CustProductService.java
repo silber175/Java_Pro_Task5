@@ -1,7 +1,5 @@
 package KruchkovTask5;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import java.sql.SQLException;
 import java.util.List;
 

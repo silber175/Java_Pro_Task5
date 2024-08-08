@@ -14,11 +14,9 @@ public class UserCustProduct {
         this.userId = userId;
         this.custProductId = custProductId;
     }
-
     public long getUserId() {
         return this.userId;
     }
-
     public long getCustProductId() {
         return this.custProductId;
     }
