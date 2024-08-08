@@ -1,5 +1,4 @@
-package Kruchkov.Task4;
-
+import KruchkovTask5.User;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.sql.DataSource;
@@ -28,16 +27,6 @@ public class UserDAO {
     public void insert(User user) throws SQLException {
         String query = "INSERT INTO "+this.tableName + " (username) VALUES ("+'\''+user.getUsername()+'\''+")";
         System.out.println(" query = "+query);
-        try
-        {
-            statement.execute(query);
-        }
-        catch(SQLException e){ throw e; }
-    }
-
-
-    public void commit() throws SQLException {
-       String query = "COMMIT";
         try
         {
             statement.execute(query);

@@ -1,20 +1,6 @@
-package Kruchkov.Task4;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.Table;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
-@Table(name="user")
-    public class User {
-        @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class User {
         private long id;
-
-        @Column(name = "username")
         private String username;
-
 
         public User() {
         }
