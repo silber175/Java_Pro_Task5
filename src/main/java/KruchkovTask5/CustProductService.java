@@ -18,7 +18,6 @@ public class CustProductService {
     public List<CustProduct> findByUserId(long userId) throws SQLException {
         return this.custProductDao.findByUserId(userId);
     }
-
     public CustProductDao getCustProductDao() {
         return  this.custProductDao;
     }

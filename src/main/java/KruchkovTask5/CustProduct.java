@@ -1,10 +1,5 @@
 package KruchkovTask5;
 
-
-import jakarta.persistence.*;
-import org.springframework.beans.factory.annotation.Autowired;
-
-
 public class CustProduct {
     private long id;
     private String accountNumber;

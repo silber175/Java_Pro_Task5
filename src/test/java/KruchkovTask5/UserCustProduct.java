@@ -1,8 +1,5 @@
 package KruchkovTask5;
 
-import jakarta.persistence.*;
-
-
 public class UserCustProduct {
     private long id;
     private long userId;        // user_id
