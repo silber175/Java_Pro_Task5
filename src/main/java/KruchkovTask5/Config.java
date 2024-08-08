@@ -1,4 +1,5 @@
-package Kruchkov.Task4;
+package KruchkovTask5;
+
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
@@ -14,8 +15,6 @@ import javax.sql.DataSource;
 @EnableConfigurationProperties
 @ConfigurationProperties
 public class Config {
-
-
     @Bean
     public DataSource dataSource() {
         HikariConfig config = new HikariConfig();
@@ -27,16 +26,17 @@ public class Config {
         config.addDataSourceProperty("cachePrepStmts", "true");
         config.addDataSourceProperty("prepStmtCacheSize", "250");
         config.addDataSourceProperty("prepStmtCacheSqlLimit", "2048");
+        config.setAutoCommit(true);
         return new HikariDataSource(config);
     }
 
     @Bean
-    public UserDAO userDAO(DataSource dataSource){
-        return new UserDAO(dataSource);
+    public CustProductDao custProductDao(DataSource dataSource) {
+        return new CustProductDao(dataSource);
     }
 
-    @Bean @DependsOn("userDAO")
-    public UserService userService(UserDAO userDAO) {
-        return new UserService(userDAO);
+    @Bean @DependsOn("custProductDao")
+    public CustProductService custProductService(CustProductDao custProductDao) {
+        return new CustProductService(custProductDao);
     }
 }
